@@ -67,8 +67,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ParametrosAlumnos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ParametrosMaestros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParametrosAlumnos.xaml.cs">
+      <DependentUpon>ParametrosAlumnos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ParametrosMaestros.xaml.cs">
+      <DependentUpon>ParametrosMaestros.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

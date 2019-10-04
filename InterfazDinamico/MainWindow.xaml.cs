@@ -32,7 +32,36 @@ namespace InterfazDinamico
 
         private void BtnAgregar_Click(object sender, RoutedEventArgs e)
         {
+            Guardar.Visibility = Visibility.Visible;
+            Cerrar.Visibility = Visibility.Visible;
+            gridDeInfo.Children.Clear();
+            switch (cbElegir.SelectedIndex)
 
+            {
+                case 0:
+
+                    gridDeInfo.Children.Add(new ParametrosAlumnos());
+                    break;
+
+                case 1:
+
+                    gridDeInfo.Children.Add(new ParametrosMaestros());
+                    break;
+            }
+        }
+
+        private void Guardar_Click(object sender, RoutedEventArgs e)
+        {
+            gridDeInfo.Children.Clear();
+            Guardar.Visibility = Visibility.Hidden;
+            Cerrar.Visibility = Visibility.Hidden;
+        }
+
+        private void Cerrar_Click(object sender, RoutedEventArgs e)
+        {
+            gridDeInfo.Children.Clear();
+            Guardar.Visibility = Visibility.Hidden;
+            Cerrar.Visibility = Visibility.Hidden;
         }
     }
 }
